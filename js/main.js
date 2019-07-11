@@ -30,7 +30,7 @@ const endPoint=`https://api.themoviedb.org/3/movie/now_playing?api_key=41431b33b
           <div class="col-md-6">
             <div class="card-body">
              <p class="card-text box">Release Date:${movie.release_date}</p>  
-             <p class="card-text">${movie.overview}</p>            
+             <p class="card-text">${movie.overview.substring(0,380)}...</p>            
            </div>             
           </div>
         </div>
@@ -91,10 +91,7 @@ const showVideo = (id) => {
         let jsonData = JSON.parse(xhr2.responseText);
         let img = `http://image.tmdb.org/t/p/w400${jsonData.poster_path}`;
 
-        let genres = "";
-        for(x = 0; x < jsonData.genres.length; x++){
-         genres += jsonData.genres[x].name + " ";
-        }
+        jsonData.genres.forEach(genres => {
         
         displayModal.innerHTML = `
 
@@ -128,6 +125,7 @@ const showVideo = (id) => {
           </div>
          
         `
+        })
       }
     }
   });

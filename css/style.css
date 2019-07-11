@@ -15,6 +15,7 @@ header {
   margin-top: 5em;
 }
 
+
 .title {
   background-color: black;
   color: white;
@@ -28,6 +29,11 @@ header {
 .navbar {
   background-color: #730202;
 }
+
+.top-header {
+  margin: 1em 0;
+}
+
 
 .rating-outline {
   margin: 1em 0;
@@ -82,8 +88,6 @@ header {
   color: white;
 }
 
-
-
 .modal-footer {
   margin: 1em 0;
 }
@@ -92,6 +96,13 @@ header {
   padding: 0.5em;
 }
 
+.top-header {
+  margin: 0.25em 0;
+}
+
+.foot-icons {
+  margin: 1em 0;
+}
 
 
 @media screen and (min-width: 700px){
@@ -101,9 +112,13 @@ header {
   }
 }
 
-@media screen and (min-width: 1050px) {
+@media screen and (min-width: 1200px) {
   header {
     margin-top: 6.5em;
+  }
+
+  .top-header {
+    margin: 0.25em 0;
   }
 
   .layout{
@@ -118,6 +133,9 @@ header {
     padding: 0;
   }   
 
+  .foot-icons {
+    margin: 1em 0;
+  }
 
 } 
 
